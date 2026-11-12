@@ -1,13 +1,7 @@
-Tool version: LLVM version 23.1.5
-Command: clang-tidy main.cpp --quiet --checks="-*,readability-*,bugprone-*" -- -std=c++17
-
-Diagnostics observed:
-- main.cpp:3:30 parameter 'p' is too short [readability-identifier-length]
-- main.cpp:3:37 parameter 'q' is too short [readability-identifier-length]
-- main.cpp:5:12 variable 't' is too short [readability-identifier-length]
-- <add any further warnings from clang-tidy-before.txt>
-
-Issues I intend to fix:
-- Rename p, q, t to meaningful names
-- Replace hard-coded 1000 and 0.10 with named constants
-- Extract the discount rule into its own function
+After refactoring
+-----------------
+Tool version: <version printed by clang-tidy --version>
+Command: clang-tidy order.cpp --quiet --checks="-*,readability-*,bugprone-*" -- -std=c++17
+Result: no diagnostics reported for order.cpp with the enabled checks (clang-tidy-after.txt is empty).
+Previously reported identifier-length warnings for p, q and t no longer appear because those identifiers were renamed to unitPrice, quantity and subtotal.
+Note: a clean report does not prove the program is correct. Behavior was verified with the three recorded outputs (1125, 200, 1000) and the assertions in test.cpp.
