@@ -3,16 +3,19 @@
 constexpr double DISCOUNT_THRESHOLD = 1000.0;
 constexpr double DISCOUNT_RATE = 0.10;
 
-double calculateOrderTotal(double unitPrice, int quantity)
+double applyDiscount(double subtotal)
 {
-    double subtotal = unitPrice * quantity;
-
     if (subtotal > DISCOUNT_THRESHOLD)
     {
-        subtotal -= subtotal * DISCOUNT_RATE;
+        return subtotal * (1.0 - DISCOUNT_RATE);
     }
-
     return subtotal;
+}
+
+double calculateOrderTotal(double unitPrice, int quantity)
+{
+    const double subtotal = unitPrice * quantity;
+    return applyDiscount(subtotal);
 }
 
 int main()
