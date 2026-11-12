@@ -1,0 +1,7 @@
+*.exe
+app
+legacy_app
+refactored_app
+tests
+build/
+.vscode/
