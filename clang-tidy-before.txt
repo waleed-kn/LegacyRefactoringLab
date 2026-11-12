@@ -1,0 +1,27 @@
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:3:30: warning: parameter name 'p' is too short, expected at least 3 characters [readability-identifier-length]
+    3 | double calculateTotal(double p, int q)
+      |                              ^
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:3:37: warning: parameter name 'q' is too short, expected at least 3 characters [readability-identifier-length]
+    3 | double calculateTotal(double p, int q)
+      |                                     ^
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:5:12: warning: variable name 't' is too short, expected at least 3 characters [readability-identifier-length]
+    5 |     double t = p * q;
+      |            ^
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:6:13: warning: 1000 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+    6 |     if (t > 1000)
+      |             ^
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:8:22: warning: 0.10 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+    8 |         t = t - (t * 0.10);
+      |                      ^
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:15:33: warning: 250.0 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   15 |     std::cout << calculateTotal(250.0, 5) << '\n';
+      |                                 ^
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:15:40: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   15 |     std::cout << calculateTotal(250.0, 5) << '\n';
+      |                                        ^
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:17:33: warning: 200.0 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   17 |     std::cout << calculateTotal(200.0, 5) << '\n';
+      |                                 ^
+C:/Users/Muhammad Waleed/desktop/LegacyRefactoringLab/main.cpp:17:40: warning: 5 is a magic number; consider replacing it with a named constant [readability-magic-numbers]
+   17 |     std::cout << calculateTotal(200.0, 5) << '\n';
+      |                                        ^

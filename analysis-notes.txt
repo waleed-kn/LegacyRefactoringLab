@@ -1,0 +1,13 @@
+Tool version: LLVM version 23.1.5
+Command: clang-tidy main.cpp --quiet --checks="-*,readability-*,bugprone-*" -- -std=c++17
+
+Diagnostics observed:
+- main.cpp:3:30 parameter 'p' is too short [readability-identifier-length]
+- main.cpp:3:37 parameter 'q' is too short [readability-identifier-length]
+- main.cpp:5:12 variable 't' is too short [readability-identifier-length]
+- <add any further warnings from clang-tidy-before.txt>
+
+Issues I intend to fix:
+- Rename p, q, t to meaningful names
+- Replace hard-coded 1000 and 0.10 with named constants
+- Extract the discount rule into its own function
